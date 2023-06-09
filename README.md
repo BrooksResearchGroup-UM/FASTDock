@@ -26,7 +26,7 @@
 
 2. *`script/cluster_and_score.py`*
 
-      **Clusters each chemotype based on a 2$\mathring A$ radius using MMTSB. Clusters different 
+      **Clusters each chemotype based on a 2A radius using MMTSB. Clusters different 
       chemotypes together to identify putative binding sites and scores them.**
 
       **to run:** `python script/cluster_and_score.py`<p>
