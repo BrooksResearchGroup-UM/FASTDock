@@ -42,5 +42,6 @@
 ## Running the tutorial *`FastDock_Tutorial.ipynb`* 
 
 ### The tutorial recapitulates the same run as the basic set of scripts noted above. You can go through the steps in the tutorial and observe the function of each component as well as visualize the results.
-      
+           
+## For information on installing pyCHARMM and CHARMM in a conda enviroment and installing MMTSB ToolSet see Install_Tools folder 
 <!-- #endregion -->
