@@ -1,4 +1,3 @@
-<!-- #region -->
 ## 0. Installing needed tools for FASTDock
 ### In order to use FASTDock you will need to:
 - **Create a conda environment capable of building CHARMM and pyCHARMM**
@@ -25,10 +24,8 @@
  - **Install needed packages to build CHARMM and pyCHARMM**<p>
 `mamba install -y -c conda-forge gcc gxx gfortran make cmake binutils fftw openmpi openmm mpi4py sysroot_linux-64==2.17 readline==8.2 rdkit openbabel pandas jupyter_core jupyter_client jupyterlab jupyterlab_widgets jupyter_server jupyterlab_server jupyter_console jupyter jupytext biopython py3dmol mdtraj jsonpickle pymol-open-source`
     
-    
 <div class="alert alert-block alert-warning">
 <b>Note on CUDA Toolkit/Driver and Compiler Compatabilities:</b> In choosing the CUDA Toolkit you need to coordinate with the compatable CUDA Driver and compilers. The table below outlines these requirements. You should check with your systems manager regarding the installed CUDA Driver on the computer cluster/machine on which you plan to install CHARMM/pyCHARMM. However, you can also glean this information by running the command <i>nvidia-smi</i> on one of the nodes of your GPU-equipped computers. In this case the CUDA Driver will be displayed at the top of the output created from this command:</div>
-
 
 `nvidia-smi>`
 
@@ -41,9 +38,9 @@
 <div class="alert alert-block alert-warning">
 Specifying that the Driver Version is 525.85.05. Thus, as seen from the table below, this Driver is compatable with CUDA 12.0, GCC >= 12.1 or Intel Compilers 2021.6.
 </div>
-    
+
 | Toolkit Version | Minimum Required Driver | Recommended GCC | Recommended Intel Compilers
-| :-: | :-: | :-: | :-: 
+| :-: | :-: | :-: | :-:     
 |CUDA 12.1.x|>=530.30.02|12.2|2021.7
 |CUDA 12.0.0|>=525.85.05|12.1|2021.6
 |CUDA 11.8.x|>=520.61.05|11|2021
@@ -60,7 +57,6 @@ Specifying that the Driver Version is 525.85.05. Thus, as seen from the table be
 |CUDA 8|>= 375.26|4.8.2|15, 16
 
 ## 2. Building the CHARMM/pyCHARMM compatable environment with a YAML file
-
  
 `charmm_wcuda12.yml`
  
@@ -136,10 +132,8 @@ make j <n> install
 </blockquote>
 
 - **\<charmm_root\> is the path to the charmm top level tree**
-
 - **\<charmm_install_path\> is the path where you want the CHARMM installation to reside**
-
-- **\<n> is the number of cores to use in compiling the code**
+- **\<n\> is the number of cores to use in compiling the code**
 
 ### pyCHARMM is built from the same source and can be built in the same build directory
 
@@ -162,5 +156,3 @@ setenv CHARMM_LIB_DIR <pycharmm_install_path>/lib
     
 - **\<pycharmm_install_path\> is the path where you want the pyCHARMM installation to reside**
 
-
-<!-- #endregion -->
