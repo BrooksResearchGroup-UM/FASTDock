@@ -1,0 +1,59 @@
+PSF EXT CMAP CHEQ XPLOR
+
+         9 !NTITLE
+* THIS SCRIPT READS A PROTEIN PSF AND STRUCTURE AND THEN BUILDS A GRID          
+* POTENTIAL TO REPRESENT THAT PROTEIN FOR LIGAND FRAGMENT DOCKING USING         
+* FFT-BASED FRAGMENT DOCKING. THE PROTEIN IS STRANSLATED AND ORIENTED TO        
+* SITE AT THE ORIGIN WITH ITS MAJOR AXES ALONG AN ORTHOGNAL COORDINATE          
+* SYSTEM. FROM THIS PROTEIN STRUCTURE A 3D DOCKING GRID IS BUILT AND            
+* EACH OF 16 DIFFERENT FUNCTIONAL GROUP FRAGMENT PROBES ARE DOCKED.             
+* THE DOCKED PROBES ARE CLUSTERED AND THE CLUSTER CENTER IS EVALUATED           
+* FOR IT'S DOCKING ENERGY.                                                      
+*  DATE:     6/29/20     15:25:21      CREATED BY USER: brookscl                
+
+         7 !NATOM
+         1 LIG      1        AALD     HA       HGR52    0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         2 LIG      1        AALD     C        CG2O4    0.200000       12.0110           0   0.00000     -0.301140E-02
+         3 LIG      1        AALD     O        OG2D1   -0.400000       15.9994           0   0.00000     -0.301140E-02
+         4 LIG      1        AALD     CB       CG331   -0.160000       12.0110           0   0.00000     -0.301140E-02
+         5 LIG      1        AALD     HB1      HGA3     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         6 LIG      1        AALD     HB2      HGA3     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         7 LIG      1        AALD     HB3      HGA3     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+
+         6 !NBOND: bonds
+         1         2         2         4         4         5         4         6
+         4         7         2         3
+
+         9 !NTHETA: angles
+         1         2         3         1         2         4         3         2         4
+         2         4         5         2         4         6         2         4         7
+         5         4         6         5         4         7         6         4         7
+
+         6 !NPHI: dihedrals
+         1         2         4         5         1         2         4         6
+         1         2         4         7         3         2         4         5
+         3         2         4         6         3         2         4         7
+
+         1 !NIMPHI: impropers
+         2         4         3         1
+
+         0 !NDON: donors
+
+
+         1 !NACC: acceptors
+         3         0
+
+         0 !NNB
+
+         0         0         0         0         0         0         0
+
+         1         0 !NGRP NST2
+         0         1         0
+
+         1 !MOLNT
+         1         1         1         1         1         1         1
+
+         0         0 !NUMLP NUMLPH
+
+         0 !NCRTERM: cross-terms
+

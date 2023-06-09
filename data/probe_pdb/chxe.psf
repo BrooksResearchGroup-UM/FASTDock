@@ -1,0 +1,98 @@
+PSF EXT CMAP CHEQ XPLOR
+
+         9 !NTITLE
+* THIS SCRIPT READS A PROTEIN PSF AND STRUCTURE AND THEN BUILDS A GRID          
+* POTENTIAL TO REPRESENT THAT PROTEIN FOR LIGAND FRAGMENT DOCKING USING         
+* FFT-BASED FRAGMENT DOCKING. THE PROTEIN IS STRANSLATED AND ORIENTED TO        
+* SITE AT THE ORIGIN WITH ITS MAJOR AXES ALONG AN ORTHOGNAL COORDINATE          
+* SYSTEM. FROM THIS PROTEIN STRUCTURE A 3D DOCKING GRID IS BUILT AND            
+* EACH OF 16 DIFFERENT FUNCTIONAL GROUP FRAGMENT PROBES ARE DOCKED.             
+* THE DOCKED PROBES ARE CLUSTERED AND THE CLUSTER CENTER IS EVALUATED           
+* FOR IT'S DOCKING ENERGY.                                                      
+*  DATE:     6/29/20     15:25:21      CREATED BY USER: brookscl                
+
+        16 !NATOM
+         1 LIG      1        CHXE     C1       CG321   -0.180000       12.0110           0   0.00000     -0.301140E-02
+         2 LIG      1        CHXE     H11      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         3 LIG      1        CHXE     H12      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         4 LIG      1        CHXE     C2       CG321   -0.180000       12.0110           0   0.00000     -0.301140E-02
+         5 LIG      1        CHXE     H21      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         6 LIG      1        CHXE     H22      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         7 LIG      1        CHXE     C3       CG321   -0.180000       12.0110           0   0.00000     -0.301140E-02
+         8 LIG      1        CHXE     H31      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+         9 LIG      1        CHXE     H32      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+        10 LIG      1        CHXE     C4       CG321   -0.180000       12.0110           0   0.00000     -0.301140E-02
+        11 LIG      1        CHXE     H41      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+        12 LIG      1        CHXE     H42      HGA2     0.900000E-01   1.00800           0   0.00000     -0.301140E-02
+        13 LIG      1        CHXE     C5       CG2D1   -0.150000       12.0110           0   0.00000     -0.301140E-02
+        14 LIG      1        CHXE     H5       HGA4     0.150000       1.00800           0   0.00000     -0.301140E-02
+        15 LIG      1        CHXE     C6       CG2D1   -0.150000       12.0110           0   0.00000     -0.301140E-02
+        16 LIG      1        CHXE     H6       HGA4     0.150000       1.00800           0   0.00000     -0.301140E-02
+
+        16 !NBOND: bonds
+         1         4         4         7         7        10        10        13
+        13        15        15         1        15        16         1         2
+         1         3         4         5         4         6         7         8
+         7         9        10        11        10        12        13        14
+
+        30 !NTHETA: angles
+         2         1         3         2         1         4         2         1        15
+         3         1         4         3         1        15         4         1        15
+         1         4         5         1         4         6         1         4         7
+         5         4         6         5         4         7         6         4         7
+         4         7         8         4         7         9         4         7        10
+         8         7         9         8         7        10         9         7        10
+         7        10        11         7        10        12         7        10        13
+        11        10        12        11        10        13        12        10        13
+        10        13        14        10        13        15        14        13        15
+         1        15        13         1        15        16        13        15        16
+
+        43 !NPHI: dihedrals
+         1         4         7         8         1         4         7         9
+         1         4         7        10         1        15        13        10
+         1        15        13        14         2         1         4         5
+         2         1         4         6         2         1         4         7
+         2         1        15        13         2         1        15        16
+         3         1         4         5         3         1         4         6
+         3         1         4         7         3         1        15        13
+         3         1        15        16         4         1        15        13
+         4         1        15        16         4         7        10        11
+         4         7        10        12         4         7        10        13
+         5         4         1        15         5         4         7         8
+         5         4         7         9         5         4         7        10
+         6         4         1        15         6         4         7         8
+         6         4         7         9         6         4         7        10
+         7         4         1        15         7        10        13        14
+         7        10        13        15         8         7        10        11
+         8         7        10        12         8         7        10        13
+         9         7        10        11         9         7        10        12
+         9         7        10        13        10        13        15        16
+        11        10        13        14        11        10        13        15
+        12        10        13        14        12        10        13        15
+        14        13        15        16
+
+         0 !NIMPHI: impropers
+
+
+         0 !NDON: donors
+
+
+         0 !NACC: acceptors
+
+
+         0 !NNB
+
+         0         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0         0
+
+         1         0 !NGRP NST2
+         0         1         0
+
+         1 !MOLNT
+         1         1         1         1         1         1         1         1
+         1         1         1         1         1         1         1         1
+
+         0         0 !NUMLP NUMLPH
+
+         0 !NCRTERM: cross-terms
+
